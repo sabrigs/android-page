@@ -1,44 +1,69 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:ital,wght@0,100..900;1,100..900&family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 @font-face {
-    font-family: 'Android';
-    src: url(font/idroid.otf) format('opentype');
+    font-family: 'RealisticNature';
+    src: url(font/RealisticNature.otf) format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 :root {
-    /* Colors */
-    --blue-1: #fbfdff;
-    --blue-2: #f4faff;
-    --blue-3: #e9f3ff;
-    --blue-4: #d9edff;
-    --blue-5: #c7e3ff;
-    --blue-6: #b2d6ff;
-    --blue-7: #97c5f8;
-    --blue-8: #6eaef3;
-    --blue-9: #0588f0;
-    --blue-10: #007ae4;
-    --blue-11: #0074da;
-    --blue-12: #003463;
-    --gray-1: #fcfcfd;
-    --gray-2: #f9f9fb;
-    --gray-3: #eff0f3;
-    --gray-4: #e7e8ec;
-    --gray-5: #e0e1e6;
-    --gray-6: #d8d9e0;
-    --gray-7: #cdced7;
-    --gray-8: #b9bbc6;
-    --gray-9: #8b8d98;
-    --gray-10: #80828d;
-    --gray-11: #62636c;
-    --gray-12: #1e1f24;
-    
-    /* Fonts */
-    --font-default: Arial, Helvetica, sans-serif;
-    --font-accent: Android, Arial, Helvetica, sans-serif;
+  --gold-1: #fdfdfc;
+  --gold-2: #faf9f2;
+  --gold-3: #f2f0e7;
+  --gold-4: #eae6db;
+  --gold-5: #e1dccf;
+  --gold-6: #d8d0bf;
+  --gold-7: #cbc0aa;
+  --gold-8: #b9a88d;
+  --gold-9: #978365;
+  --gold-10: #8c7a5e;
+  --gold-11: #71624b;
+  --gold-12: #3b352b;
+  --grass-1: #fbfefb;
+  --grass-2: #f5fbf5;
+  --grass-3: #e9f6e9;
+  --grass-4: #daf1db;
+  --grass-5: #c9e8ca;
+  --grass-6: #b2ddb5;
+  --grass-7: #94ce9a;
+  --grass-8: #65ba74;
+  --grass-9: #46a758;
+  --grass-10: #3e9b4f;
+  --grass-11: #2a7e3b;
+  --grass-12: #203c25;
+
+  /* Accent */
+  --color-accent-bg-subtle: var(--gold-6);
+  --color-accent-bg: var(--gold-3);
+  --color-accent-bg-hover: var(--gold-5);
+  --color-accent-bg-active: var(--gold-5);
+  --color-accent-border: var(--gold-6);
+  --color-accent-border-hover: var(--gold-7);
+  --color-accent-solid: var(--gold-11);
+  --color-accent-solid-hover: var(--gold-11);
+  --color-accent-text-low: var(--gold-11);
+  --color-accent-text-high: var(--gold-12);
+  --color-accent-text-on-solid: var(--gold-2);
+
+  /* Secondary */
+  --color-secondary-bg-subtle: var(--grass-4);
+  --color-secondary-bg: var(--grass-3);
+  --color-secondary-bg-hover: var(--grass-4);
+  --color-secondary-bg-active: var(--grass-5);
+  --color-secondary-border: var(--grass-6);
+  --color-secondary-border-hover: var(--grass-7);
+  --color-secondary-solid: var(--grass-8);
+  --color-secondary-solid-hover: var(--grass-10);
+  --color-secondary-text-low: var(--grass-11);
+  --color-secondary-text-high: var(--grass-12);
+  --color-secondary-text-on-solid: var(--color-white);
+
+  /* Fonts */
+  --font-default: IBM Plex Sans, Arial, Helvetica, sans-serif;
+  --font-accent: RealisticNature, Arial, Helvetica, sans-serif;
 }
 
 /* Globais */
@@ -46,146 +71,136 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: var(--font-default);
+    line-height: 1.5em;
+}
+
+body {
+    background-color: var(--color-accent-bg);
 }
 
 a:hover {
     text-decoration: underline;
-    color: var(--blue-12);
+    color: var(--color-secondary-text-high);
 }
 
 a.external-link::after {
-    content: ' \1F517';
-}
-
-p {
-    text-indent: 24px;
-    font-family: var(--font-default);
-    line-height: 1.5em;
+    content: ' \2197';
 }
 
 /* Grouping Tags */
 main img.wide {
     width: 100%;
     margin-block: 16px;
-}
-
-main img.small {
-    max-width: 350px;
-    display: block;
-    margin: auto;
+    border-radius: 8px;
+    background-color: var(--color-accent-bg-subtle);
 }
 
 header {
-    background-image: linear-gradient(to top, var(--blue-11), var(--blue-9));
+    background-color: var(--color-accent-bg);
     text-align: center;
-    color: white;
-    padding: 24px 24px 0px 24px;
+    color: var(--color-accent-text-low);
+    padding: 24px;
 }
 
 header > h1 {
-    text-shadow: 1px 2px #0000007d;
-    color: white;
-    font-family: Bebas Neue, Arial, Helvetica, sans-serif;
+    color: var(--color-accent-text-high);;
+    font-family: var(--font-accent);
     font-size: 3em;
     font-weight: normal;
 }
 
-header > p {
-    text-shadow: 1px 1px #0000007d;
-}
-
 nav {
-    background-color: var(--blue-11);
+    background-color: var(--color-accent-bg);
     padding: 24px 24px;
     text-align: center;
+    border-bottom: 1px solid var(--color-accent-border);
 }
 
 nav > a {
-    color: var(--gray-1);
+    color: var(--color-accent-text-high);
     text-decoration: none;
-    font-weight: 800;
-    font-family: var(--font-default);
+    font-weight: normal;
     padding: 16px 12px;
     transition-duration: .2s;
-    border-radius: 8px;
 }
 
 nav > a:hover {
-    background-color: var(--blue-12);
-    color: var(--gray-1);
+    background-color: var(--color-accent-bg-hover);
+    color: var(--color-accent-text-high);
     text-decoration: none;
     border-radius: 8px;
 }
 
-main {
-    background-color: var(--blue-6);
-    padding: 0px 8px 16px 8px;
-}
-
 article {
-    background-color: var(--gray-1);
-    padding: 24px 16px;
-    border-radius: 0px 0px 8px 8px;
-    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.19);    
+    background-color: var(--color-accent-bg);
+    padding: 32px;
+    padding-bottom: 64px;
+    border-left: 1px solid var(--color-accent-border);
+    border-right: 1px solid var(--color-accent-border);   
     max-width: 600px;
     margin-inline: auto;
 }
 
 article strong {
-    color: var(--blue-10);
+    color: var(--color-secondary-text-high);
 }
 
 article a {
-    color: var(--blue-11);
-    background-color: var(--blue-5);
+    color: var(--color-secondary-text-high);
+    background-color: var(--color-secondary-bg-subtle);
     font-weight: 800;
     text-decoration: none;
 }
 
 article h1 {
-    color: var(--blue-12);
-    font-family: var(--font-accent);
-    text-transform: uppercase;
-    font-size: 1.8em;
+    color: var(--color-accent-text-high);
+    font-size: 2em;
     margin-bottom: 16px;
     font-weight: normal;
 }
 
 article h2 {
-    background-image: linear-gradient(to left, var(--gray-1), var(--blue-5));
-    color: var(--blue-12);
-    font-family: var(--font-accent);
-    text-transform: uppercase;
+    color: var(--color-accent-text-high);
     padding-left: 8px;
     margin-block: 16px;
+    font-size: 1.5em;
     font-weight: normal;
 }
 
-div.video {
-    background-color: var(--blue-11);
-    margin: 16px -16px;
-    padding: 24px;
+article p {
+    text-indent: 24px;
+    text-align: justify;
+    color: var(--color-accent-text-high);
 }
 
-aside {
-    margin-bottom: 16px;
+div.video {
+    background-color: var(--color-secondary-solid);
+    margin: 32px -32px;
+    padding: 32px;
+}
+
+iframe {
+    border-radius: 8px;
 }
 
 aside div.header {
-    background-color: var(--blue-9);
+    background-color: var(--color-accent-bg-subtle);
     border-radius: 8px 8px 0px 0px;
     padding: 16px;
+
 }
 
 aside h3 {
-    font-family: var(--font-default);
-    color: var(--gray-1);
+    color: var(--color-accent-text-high);
 }
 
 aside div.body {
-    background-color: var(--blue-4);
+    background-color: var(--color-accent-bg);
     padding: 16px;
     border-radius: 0px 0px 8px 8px;
+    border: 1px solid var(--color-accent-border);   
+    margin-bottom: 32px; 
 }
 
 aside li::before {
@@ -193,7 +208,6 @@ aside li::before {
 }
 
 aside ul {
-    font-family: var(--font-default);
     list-style-type: none;
     margin-block: 16px; 
     columns: 2;
@@ -201,22 +215,22 @@ aside ul {
 }
 
 footer {
-    background-color: var(--blue-12);
-    color: var(--gray-1);
+    background-color: var(--color-accent-solid);
+    color: var(--color-accent-text-on-solid);
     padding: 16px;
     text-align: center;
 }
 
 footer > strong {
-    color: var(--gray-1);
+    color: var(--color-accent-text-on-solid);
 }
 
 footer a {
-    color: var(--gray-1);
+    color: var(--color-accent-text-on-solid);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: var(--gray-1);
+    color: var(--color-accent-text-on-solid);
     text-decoration: underline;
 }
