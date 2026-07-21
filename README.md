@@ -4,5 +4,4 @@ My main goal was to first recreate exactly the sabe style as Guanabarra creates,
 
 | Version 1 | Version 2 |
 | -------- | -------- |
-| ![Logo Graphic](github/v1.jpg) |
-| ![Logo Graphic](github/v2.jpg) |
+| ![Logo Graphic](github/v1.jpg) | ![Logo Graphic](github/v2.jpg) |
